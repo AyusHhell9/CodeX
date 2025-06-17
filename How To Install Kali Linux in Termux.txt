@@ -1,0 +1,40 @@
+How To Install Kali Linux in Termux 
+
+1. pkg update 
+2. pkg upgrades
+3. termux-setup-storage
+4. pkg install git
+5. pkg install wget
+6. pkg install proot-distro
+7. wget -O install-nethunter-termux https://offs.ec/2MceZWr
+8. chmod +x install-nethunter-termux
+9. ./install-nethunter-termux
+10. pkg install x11-repo
+11. pkg install termux-x11-nightly
+12. pkg install pulseaudio
+13. If you get any type of error on installing the file so download the kali nethunter file by (https://kali.download/nethunter-images/kali-2025.2/kali-nethunter-2025.2-generic-arm64-full.zip)
+14. In nethunter terminal type (sudo apt update -y && sudo apt upgrade -y
+sudo apt install chromium -y) to update & iinstall chromium 
+15. To run the startxfce4_nethunter.sh script type (nano $PREFIX/bin/nh) & (-b /data/data/com.termux/files/usr/tmp:/tmp \) in this path
+[cmdline="proot \
+        --link2symlink \
+        -0 \
+        -r kali-arm64 \
+        -b /dev \
+        -b /proc \
+        -b /data/data/com.termux/files/usr/tmp:/tmp \ # --> ADD THE LINE HERE
+        -b kali-arm64$home:/dev/shm \
+        -w $home \
+           /usr/bin/env -i \
+           HOME=$home \
+           PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin \
+           TERM=$TERM \
+           LANG=C.UTF-8 \
+           $start"]
+16. Open any browser download the (termux-x11) apk and install it
+17. To start the nethunter type (wget https://raw.githubusercontent.com/LinuxDroidMaster/Termux-Desktops/main/scripts/proot_kali/startxfce4_nethunter.sh)
+18. And exit the termux and restart termux and tpye (ls) & select the (startxfce4_nethunter.sh) copy that and type this (./startxfce4_nethunter.sh) 
+                                                                           
+                                                                                 NOTE
+ I have taken some code from @LinuxDroidMaster from github repositories
+ And copy the code and paste it on termux
